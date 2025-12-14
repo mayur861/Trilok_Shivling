@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narmadeshwar TrilokShivling Shop - The Divine Sanctum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Global Reset and Theme Colors */
+        :root {
+            --color-black: #101010;
+            --color-gold: #FF9933; /* Saffron/Deep Gold */
+            --color-silver: #A9A9A9; /* Ash-Grey/Silver */
+            --color-white: #FFFFFF;
+            --color-highlight: #E0FFFF; /* Soft White/Cyan Glow */
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--color-black);
+            color: var(--color-silver);
+            margin: 0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            /* Placeholder for subtle dark stone texture overlay */
+            /* background-image: url('dark-stone-texture.jpg'); */
+            /* background-blend-mode: multiply; */
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--color-gold);
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--color-highlight);
+        }
+        
+        h1, h2, h3 {
+            font-family: 'DM Serif Display', serif;
+            color: var(--color-gold);
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Subtle depth */
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Utility Classes */
+        .section-padding {
+            padding: 80px 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #1a1a1a;
+            padding: 10px 0;
+            border-bottom: 1px solid #282828;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu ul li {
+            margin-left: 30px;
+        }
+
+        .nav-menu ul li a {
+            color: var(--color-silver);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: var(--color-black); 
+            text-align: center;
+        }
+        
+        .shiva-bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Placeholder for Lord Shiva image with low opacity */
+            /* background: url('shiva-meditation.jpg') center center / cover no-repeat; */
+            opacity: 0.08; 
+            z-index: 1;
+        }
+        
+        .hero-content {
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--color-silver);
+            margin-bottom: 30px;
+        }
+
+        /* CTA Button Styling */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-gold);
+            color: var(--color-black);
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e68a00;
+            transform: scale(1.05);
+            color: var(--color-white);
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background-color: #1a1a1a;
+            border: 2px solid #282828;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-gold);
+        }
+
+        .product-card img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            /* Placeholder for soft white inner glow effect */
+            box-shadow: 0 0 10px var(--color-highlight); 
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--color-silver);
+        }
+
+        .product-card .whatsapp-btn {
+            background-color: #25d366; /* WhatsApp Green */
+            color: white;
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px 0;
+        }
+        
+        .product-card .call-btn {
+            background-color: var(--color-silver); 
+            color: var(--color-gold);
+            display: block;
+            padding: 10px 0;
+        }
+        
+        .product-card .call-btn:hover {
+            background-color: #999;
+            color: var(--color-black);
+        }
+
+        /* Features/Benefits Section */
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .benefit-item {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid var(--color-gold);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .benefit-item i {
+            font-size: 2rem;
+            color: var(--color-gold);
+            margin-right: 15px;
+        }
+
+        /* Contact Form Styles */
+        .contact-content {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-form-wrapper {
+            flex: 1;
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-info-item i {
+            font-size: 1.5rem;
+            color: var(--color-gold);
+            margin-right: 15px;
+        }
+
+        .contact-info-item h3 {
+            text-align: left;
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        
+        .contact-form-wrapper input,
+        .contact-form-wrapper textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background-color: #222;
+            color: var(--color-white);
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .contact-form-wrapper textarea {
+            resize: vertical;
+        }
+
+        .contact-form-wrapper button[type="submit"] {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #000000;
+            color: var(--color-silver);
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid #282828;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .nav-menu ul {
+                justify-content: space-around;
+            }
+            .nav-menu ul li {
+                margin-left: 10px;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            .contact-content {
+                flex-direction: column;
+            }
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            .benefits-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#product">Products</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="shiva-bg-overlay">
+                </div>
+            
+            <div class="hero-content">
+                <h1>WELCOME TO OUR<br>
+                Narmadeshwar TrilokShivling Shop
+                </h1>
+                <p>The Self-Manifested Stone of Creation from Maa Narmada</p>
+                <a href="tel:916263540349" class="cta-button">
+                    <i class="fas fa-phone-alt"></i> Call now for free consultation
+                </a>
+                <div style="opacity: 0.1; margin-top: 20px; font-size: 2rem;">🕉️ 💨</div>
+            </div>
+        </section>
+
+        <section id="about" class="section-padding">
+            <div class="container">
+                <h2>Our Sacred Origin</h2>
+                <hr style="border-color: var(--color-gold); width: 80px; margin: 15px auto 40px;">
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px;">
+                    
+                    <div style="flex: 1;">
+                        <p style="font-size: 1.1rem;">
+                            The **Narmadeshwar Shivling** is crafted from miraculous stone naturally found in the Narmada River bed. Worshipping this Shivling brings **happiness, peace, and wealth** into the home. 
+                        </p>
+                        <p>
+                            We meticulously craft these unique stones into the sacred, oval shape of the Shivling. We are committed to providing our customers with only the **best quality** artifacts, ensuring they receive a product that meets their spiritual satisfaction. Our Shivlings are shipped worldwide and come complete with the Jaladhari and Nandi murti.
+                        </p>
+                        <p style="font-weight: bold; color: var(--color-gold);">
+                            घर बैठे नर्मदेश्वर शिवलिंग प्राप्त करे सिर्फ एक फ़ोन कॉल से।
+                        </p>
+                        <a href="tel:916263540349" class="cta-button" style="margin-top: 20px;">
+                            <i class="fas fa-headset"></i> Call Now to Order
+                        </a>
+                    </div>
+                    
+                    <div style="flex: 1; text-align: center;">
+                        <img src="https://narmadeshwarbanalingamshop.com/wp-content/uploads/2025/01/4-e1736590905576-784x1024.jpg" 
+                             alt="Narmadeshwar Shivling stone sample" 
+                             style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 0 20px rgba(255, 153, 51, 0.3);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="product" class="section-padding" style="background-color: #1a1a1a;">
+            <div class="container">
+                <h2>Our Sacred Collection</h2>
+                <hr style="border-color: var(--color-gold); width: 80px; margin: 15px auto 40px;">
+                <p style="text-align: center; margin-bottom: 40px; font-size: 1.1rem; color: var(--color-highlight);">
+                    To get Narmadeshwar Shivling, make a phone call or message on WhatsApp and see the photo of Shivling, then place the order.
+                </p>
+
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://narmadeshwarbanalingamshop.com/wp-content/uploads/2024/06/25-1-768x1024.jpg" alt="Narmada Shivling">
+                        <h3>Narmada Shivling</h3>
+                        <a href="https://api.whatsapp.com/send?phone=916263540349&text=I am interested in the Narmada Shivling." class="whatsapp-btn cta-button">
+                            Order On Whatsapp
+                        </a>
+                        <a href="tel:916263540349" class="call-btn cta-button" style="font-size: 0.9rem;">
+                            Call Now
+                        </a>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://narmadeshwarbanalingamshop.com/wp-content/uploads/2024/06/1-768x1024.jpg" alt="White Narmadeshwar Shivling">
+                        <h3>White Narmadeshwar Shivling</h3>
+                        <a href="https://api.whatsapp.com/send?phone=916263540349&text=I am interested in the White Narmadeshwar Shivling." class="whatsapp-btn cta-button">
+                            Order On Whatsapp
+                        </a>
+                        <a href="tel:916263540349" class="call-btn cta-button" style="font-size: 0.9rem;">
+                            Call Now
+                        </a>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://narmadeshwarbanalingamshop.com/wp-content/uploads/2024/06/20-768x1024.jpg" alt="Antique Narmadeshwar Shivling">
+                        <h3>Antique Narmadeshwar Shivling</h3>
+                        <a href="https://api.whatsapp.com/send?phone=916263540349&text=I am interested in the Antique Narmadeshwar Shivling." class="whatsapp-btn cta-button">
+                            Order On Whatsapp
+                        </a>
+                        <a href="tel:916263540349" class="call-btn cta-button" style="font-size: 0.9rem;">
+                            Call Now
+                        </a>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://narmadeshwarbanalingamshop.com/wp-content/uploads/2024/06/12-768x1024.jpg" alt="TilakDhari NarmadeshwarShivling">
+                        <h3>TilakDhari NarmadeshwarShivling</h3>
+                        <a href="https://api.whatsapp.com/send?phone=916263540349&text=I am interested in the TilakDhari Shivling." class="whatsapp-btn cta-button">
+                            Order On Whatsapp
+                        </a>
+                        <a href="tel:916263540349" class="call-btn cta-button" style="font-size: 0.9rem;">
+                            Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <h2>Benefits of Installing Narmadeshwar Shivling at Home</h2>
+                <hr style="border-color: var(--color-gold); width: 80px; margin: 15px auto 40px;">
+                
+                <ul class="benefits-list">
+                    <li class="benefit-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <p>Worshipping the Shivling protects you from all types of **fear and terror**, and promotes peace and happiness in the home.</p>
+                    </li>
+                    <li class="benefit-item">
+                        <i class="fas fa-heartbeat"></i>
+                        <p>Daily worship provides freedom from **impending crises and diseases** for all family members.</p>
+                    </li>
+                    <li class="benefit-item">
+                        <i class="fas fa-chart-line"></i>
+                        <p>If you desire **promotion and advancement** in your career, worshipping the Narmadeshwar Shivling will be highly beneficial.</p>
+                    </li>
+                    <li class="benefit-item">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <p>Regular worship brings **wealth and prosperity** to your home, ending domestic disputes and strife.</p>
+                    </li>
+                    <li class="benefit-item">
+                        <i class="fas fa-hands-praying"></i>
+                        <p>Devotees who worship with a pure heart significantly **reduce the possibility of untimely death**.</p>
+                    </li>
+                    <li class="benefit-item">
+                        <i class="fas fa-brain"></i>
+                        <p>Sincere worship grants relief from **physical ailments** and provides deep **mental peace**.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="contact" class="section-padding" style="background-color: #1a1a1a;">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <hr style="border-color: var(--color-gold); width: 80px; margin: 15px auto 40px;">
+
+                <div class="contact-content">
+                    
+                    <div class="contact-info">
+                        <h3>Get in touch with us:</h3>
+                        <div class="contact-info-item">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h3>Call now for free</h3>
+                                <p style="color: var(--color-gold);">+91 6263540349 (Mr. Mayur Birla)</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope-open"></i>
+                            <div>
+                                <h3>Email us</h3>
+                                <p>mayurbirla907@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Our Location</h3>
+                                <p>Bakawan, M.P. (451113), India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper">
+                        <form id="whatsapp-form" name="New Form">
+                            <input type="text" id="form-field-name" placeholder="Enter your Name" required>
+                            <input type="tel" id="form-field-field_f730942" placeholder="Enter your Number" required>
+                            <textarea id="form-field-message" rows="5" placeholder="Message"></textarea>
+                            <button type="submit" class="cta-button" id="send-button">
+                                <span class="elementor-button-text">Send on WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p style="margin: 0; font-size: 0.9rem;">
+                Copyright © 2024 All rights reserved. | <a href="#" style="color: var(--color-silver);">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for WhatsApp redirection on form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('#whatsapp-form');
+            const myWhatsAppNumber = '916263540349'; // Your WhatsApp number WITH COUNTRY CODE
+
+            if (form) {
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    const name = document.getElementById('form-field-name').value;
+                    const number = document.getElementById('form-field-field_f730942').value;
+                    const message = document.getElementById('form-field-message').value;
+
+                    let whatsappMessage = `Hello, I have a query about Narmadeshwar Shivling from the website.\n\n`;
+                    whatsappMessage += `*Name:* ${name}\n`;
+                    whatsappMessage += `*Number:* ${number}\n`;
+                    whatsappMessage += `*Message:* ${message}`;
+
+                    const whatsappUrl = `https://api.whatsapp.com/send?phone=${myWhatsAppNumber}&text=${encodeURIComponent(whatsappMessage)}`;
+
+                    window.open(whatsappUrl, '_blank');
+                    
+                    // Optional: Clear form after submission
+                    form.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

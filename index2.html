@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Narmadeshwar TrilokShivling Shop – Narmadeshwar Shivling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Sans+Devanagari:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --saffron: #FF6B00;
+            --saffron-light: #FF8C42;
+            --gold: #C9A84C;
+            --gold-light: #E8C96A;
+            --deep: #1A0A00;
+            --dark: #2D1500;
+            --mid: #4A2800;
+            --cream: #FFF8EE;
+            --parchment: #F5E6C8;
+            --text: #2D1500;
+            --text-light: #6B4226;
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            background: var(--cream);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* ── ORNAMENTAL DIVIDER ── */
+        .ornament {
+            text-align: center;
+            color: var(--gold);
+            font-size: 1.4rem;
+            letter-spacing: 0.4em;
+            margin: 0.5rem 0;
+            opacity: 0.7;
+        }
+
+        /* ── HEADER ── */
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(26, 10, 0, 0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.3);
+        }
+
+        .header-top {
+            background: linear-gradient(90deg, var(--saffron), var(--gold), var(--saffron));
+            text-align: center;
+            padding: 6px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            color: var(--deep);
+            font-weight: 600;
+        }
+
+        .header-main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 5%;
+        }
+
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--saffron), var(--gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            box-shadow: 0 0 20px rgba(255, 107, 0, 0.4);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            letter-spacing: 0.05em;
+            line-height: 1.1;
+        }
+
+        .logo-sub {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 0.72rem;
+            color: rgba(232, 201, 106, 0.7);
+            letter-spacing: 0.02em;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            color: var(--parchment);
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+            padding-bottom: 4px;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 1px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        nav a:hover { color: var(--gold-light); }
+        nav a:hover::after { transform: scaleX(1); }
+
+        .header-cta {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-call {
+            font-family: 'Cinzel', serif;
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            padding: 9px 18px;
+            background: linear-gradient(135deg, var(--saffron), var(--saffron-light));
+            color: white;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(255, 107, 0, 0.3);
+        }
+
+        .btn-call:hover {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            box-shadow: 0 4px 20px rgba(201, 168, 76, 0.4);
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .burger span {
+            display: block;
+            width: 24px; height: 2px;
+            background: var(--gold);
+            transition: all 0.3s;
+        }
+
+        /* ── HERO ── */
+        #Home {
+            min-height: 100vh;
+            background: linear-gradient(160deg, var(--deep) 0%, var(--dark) 50%, #3D1800 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-top: 90px;
+            overflow: hidden;
+        }
+
+        #Home::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(ellipse 60% 80% at 70% 50%, rgba(255, 107, 0, 0.12) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 60% at 30% 30%, rgba(201, 168, 76, 0.08) 0%, transparent 60%);
+        }
+
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(201, 168, 76, 0.04) 60px),
+                repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(201, 168, 76, 0.04) 60px);
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-left { }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            border: 1px solid rgba(201, 168, 76, 0.4);
+            padding: 6px 16px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.2rem, 4.5vw, 4rem);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, var(--saffron), var(--gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+
+        .hero-hindi {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1.1rem;
+            color: rgba(232, 201, 106, 0.8);
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+
+        .hero-desc {
+            font-size: 1.05rem;
+            color: rgba(245, 230, 200, 0.75);
+            line-height: 1.8;
+            margin-bottom: 36px;
+            font-weight: 300;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, var(--saffron), #FF8C42);
+            color: white;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(255, 107, 0, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255, 107, 0, 0.5);
+        }
+
+        .btn-whatsapp {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            padding: 14px 28px;
+            background: var(--whatsapp);
+            color: white;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(201, 168, 76, 0.2);
+        }
+
+        .stat-item { text-align: center; }
+
+        .stat-num {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.78rem;
+            color: rgba(245, 230, 200, 0.6);
+            letter-spacing: 0.05em;
+            font-family: 'Cinzel', serif;
+        }
+
+        .hero-right {
+            position: relative;
+        }
+
+        .hero-image-frame {
+            position: relative;
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            padding: 12px;
+        }
+
+        .hero-image-frame::before {
+            content: '';
+            position: absolute;
+            top: -8px; left: -8px; right: -8px; bottom: -8px;
+            border: 1px solid rgba(201, 168, 76, 0.15);
+        }
+
+        .hero-image-frame img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            max-height: 500px;
+        }
+
+        .hero-float-card {
+            position: absolute;
+            bottom: -20px;
+            left: -30px;
+            background: var(--dark);
+            border: 1px solid rgba(201, 168, 76, 0.4);
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .float-icon {
+            width: 40px; height: 40px;
+            background: linear-gradient(135deg, var(--saffron), var(--gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .float-text span {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            color: var(--gold-light);
+        }
+
+        .float-text small {
+            font-size: 0.68rem;
+            color: rgba(245, 230, 200, 0.6);
+        }
+
+        /* ── SECTION BASE ── */
+        section { padding: 80px 5%; }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.68rem;
+            letter-spacing: 0.35em;
+            color: var(--saffron);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .section-hindi {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 300;
+        }
+
+        .gold-line {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            margin: 16px auto 0;
+        }
+
+        /* ── ABOUT ── */
+        #about {
+            background: var(--white);
+        }
+
+        .about-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-light);
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+
+        .about-features {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 32px;
+        }
+
+        .feature-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .feature-dot {
+            width: 8px; height: 8px;
+            background: var(--saffron);
+            border-radius: 50%;
+            margin-top: 7px;
+            flex-shrink: 0;
+        }
+
+        .feature-row p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .about-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .about-img-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-img-wrap img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .about-img-wrap:hover img { transform: scale(1.04); }
+
+        .about-img-wrap:first-child {
+            grid-row: span 2;
+        }
+
+        .about-img-wrap:first-child img { height: 580px; }
+
+        /* ── PRODUCTS ── */
+        #product {
+            background: var(--cream);
+            max-width: 100%;
+        }
+
+        .products-wrap {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 28px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            overflow: hidden;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 12px 40px rgba(201, 168, 76, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .product-img {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-img img { transform: scale(1.06); }
+
+        .product-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(26, 10, 0, 0.7) 100%);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 14px; right: 14px;
+            background: var(--saffron);
+            color: white;
+            font-family: 'Cinzel', serif;
+            font-size: 0.62rem;
+            letter-spacing: 0.1em;
+            padding: 4px 10px;
+        }
+
+        .product-body {
+            padding: 20px;
+        }
+
+        .product-name {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .product-name a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .product-name a:hover { color: var(--saffron); }
+
+        .product-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-wa-sm {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 9px 10px;
+            background: var(--whatsapp);
+            color: white;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.68rem;
+            letter-spacing: 0.05em;
+            border-radius: 2px;
+            transition: all 0.2s;
+        }
+
+        .btn-wa-sm:hover { opacity: 0.88; }
+
+        .btn-call-sm {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 9px 10px;
+            background: transparent;
+            color: var(--saffron);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.68rem;
+            letter-spacing: 0.05em;
+            border: 1px solid var(--saffron);
+            border-radius: 2px;
+            transition: all 0.2s;
+        }
+
+        .btn-call-sm:hover {
+            background: var(--saffron);
+            color: white;
+        }
+
+        /* Product section heading banner */
+        .product-section-banner {
+            background: linear-gradient(135deg, var(--dark), var(--mid));
+            padding: 40px;
+            margin-bottom: 40px;
+            text-align: center;
+            border: 1px solid rgba(201, 168, 76, 0.3);
+        }
+
+        .product-section-banner h2 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            color: var(--gold-light);
+            font-weight: 600;
+        }
+
+        /* ── BENEFITS ── */
+        .benefits-section {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--deep) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefits-section::before {
+            content: 'ॐ';
+            position: absolute;
+            font-size: 30rem;
+            color: rgba(201, 168, 76, 0.03);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            pointer-events: none;
+            line-height: 1;
+        }
+
+        .benefits-section .section-title { color: var(--gold-light); }
+
+        .benefits-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            padding: 28px;
+            transition: all 0.3s;
+        }
+
+        .benefit-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(201, 168, 76, 0.5);
+        }
+
+        .benefit-num {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: rgba(255, 107, 0, 0.3);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .benefit-text {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 0.92rem;
+            color: rgba(245, 230, 200, 0.8);
+            line-height: 1.7;
+        }
+
+        /* ── CONTACT ── */
+        #contact {
+            background: var(--white);
+        }
+
+        .contact-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .contact-info > p {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 36px;
+        }
+
+        .contact-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 18px 22px;
+            border: 1px solid rgba(201, 168, 76, 0.25);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            border-color: var(--saffron);
+            background: rgba(255, 107, 0, 0.03);
+        }
+
+        .contact-icon {
+            width: 46px; height: 46px;
+            background: linear-gradient(135deg, var(--saffron), var(--gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+            flex-shrink: 0;
+            border-radius: 2px;
+        }
+
+        .contact-detail strong {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            color: var(--dark);
+            margin-bottom: 3px;
+        }
+
+        .contact-detail span {
+            font-size: 0.88rem;
+            color: var(--text-light);
+        }
+
+        .contact-form {
+            background: var(--cream);
+            padding: 36px;
+            border: 1px solid rgba(201, 168, 76, 0.2);
+        }
+
+        .contact-form h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-bottom: 24px;
+            letter-spacing: 0.05em;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.68rem;
+            letter-spacing: 0.15em;
+            color: var(--text-light);
+            margin-bottom: 7px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            background: var(--white);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+            color: var(--dark);
+            outline: none;
+            transition: border-color 0.2s;
+            border-radius: 2px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--saffron);
+        }
+
+        .form-group textarea { resize: vertical; min-height: 110px; }
+
+        .form-submit {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--saffron), var(--saffron-light));
+            color: white;
+            border: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.82rem;
+            letter-spacing: 0.2em;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        .form-submit:hover {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--dark);
+        }
+
+        /* ── FEATURES STRIP ── */
+        .features-strip {
+            background: var(--dark);
+            padding: 50px 5%;
+        }
+
+        .features-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: rgba(201, 168, 76, 0.2);
+        }
+
+        .feature-box {
+            background: var(--dark);
+            padding: 36px 30px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .feature-box:hover { background: rgba(255, 107, 0, 0.08); }
+
+        .feature-box i {
+            font-size: 2rem;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 14px;
+        }
+
+        .feature-box h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            color: var(--gold-light);
+            margin-bottom: 10px;
+        }
+
+        .feature-box p {
+            font-size: 0.85rem;
+            color: rgba(245, 230, 200, 0.6);
+            line-height: 1.7;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--deep);
+            border-top: 1px solid rgba(201, 168, 76, 0.25);
+            padding: 24px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: gap;
+        }
+
+        .footer-left a {
+            font-family: 'Cinzel', serif;
+            font-size: 0.78rem;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            transition: color 0.2s;
+        }
+
+        .footer-left a:hover { color: var(--saffron); }
+
+        .footer-right {
+            font-family: 'Cinzel', serif;
+            font-size: 0.72rem;
+            letter-spacing: 0.05em;
+            color: rgba(245, 230, 200, 0.4);
+        }
+
+        /* ── FLOATING CHAT ── */
+        .floating-chat {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-end;
+        }
+
+        .chat-btn {
+            width: 54px; height: 54px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+            transition: all 0.2s;
+        }
+
+        .chat-btn:hover { transform: scale(1.1); }
+
+        .chat-wa { background: var(--whatsapp); }
+        .chat-call { background: var(--saffron); }
+
+        /* ── ANIMATIONS ── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-up { animation: fadeUp 0.7s ease forwards; }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        .hero-badge { animation: shimmer 3s ease infinite; }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            .hero-container { grid-template-columns: 1fr; gap: 40px; }
+            .hero-right { display: none; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-images { display: none; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .features-inner { grid-template-columns: 1fr; }
+            nav ul { display: none; }
+            .burger { display: flex; }
+            footer { flex-direction: column; gap: 10px; text-align: center; }
+        }
+
+        @media (max-width: 600px) {
+            section { padding: 60px 4%; }
+            .products-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+            .hero-stats { gap: 20px; }
+            .hero-actions { flex-direction: column; }
+            .btn-primary, .btn-whatsapp { justify-content: center; }
+        }
+
+        /* Mobile menu */
+        .nav-open ul {
+            display: flex !important;
+            flex-direction: column;
+            position: fixed;
+            top: 90px; left: 0; right: 0;
+            background: var(--deep);
+            padding: 24px;
+            gap: 20px;
+            border-top: 1px solid rgba(201, 168, 76, 0.3);
+        }
+
+        /* Scroll indicator */
+        .scroll-bar {
+            position: fixed;
+            top: 0; left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--saffron), var(--gold));
+            z-index: 9999;
+            width: 0%;
+            transition: width 0.1s;
+        }
+    </style>
+</head>
+<body>
+
+<div class="scroll-bar" id="scrollBar"></div>
+
+<!-- HEADER -->
+<header id="mainHeader">
+    <div class="header-top">
+        🕉️ &nbsp; माँ नर्मदा के पावन पत्थर से निर्मित — AUTHENTIC NARMADESHWAR SHIVLING &nbsp; 🕉️
+    </div>
+    <div class="header-main">
+        <a href="#Home" class="logo-wrap">
+            <div class="logo-icon">🕉️</div>
+            <div class="logo-text">
+                <span class="logo-name">Narmadeshwar TrilokShivling</span>
+                <span class="logo-sub">नर्मदेश्वर त्रिलोक शिवलिंग शॉप</span>
+            </div>
+        </a>
+
+        <nav id="mainNav">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#product">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-cta">
+            <a href="tel:916263540349" class="btn-call"><i class="fas fa-phone-alt"></i> Call Now</a>
+            <div class="burger" id="burgerBtn" onclick="toggleNav()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="Home">
+    <div class="hero-pattern"></div>
+    <div class="hero-container">
+        <div class="hero-left fade-up">
+            <div class="hero-badge">
+                <span>🕉️</span>
+                <span>Sacred &bull; Authentic &bull; Blessed</span>
+            </div>
+
+            <h1 class="hero-title">
+                Narmadeshwar
+                <span>TrilokShivling</span>
+                Shop
+            </h1>
+
+            <p class="hero-hindi">नर्मदेश्वर त्रिलोक शिवलिंग शॉप</p>
+
+            <p class="hero-desc">
+                Such a miraculous stone obtained from Maa Narmada, worshiping which brings happiness, peace and wealth in the house. Get miraculous Narmadeshwar Shivling delivered to your home.
+            </p>
+
+            <p style="font-family: 'Noto Sans Devanagari', sans-serif; color: var(--gold-light); font-size: 0.95rem; margin-bottom: 28px;">
+                <strong>घर बैठे नर्मदेश्वर शिवलिंग प्राप्त करे सिर्फ एक फ़ोन कॉल से</strong>
+            </p>
+
+            <div class="hero-actions">
+                <a href="tel:916263540349" class="btn-primary">
+                    <i class="fas fa-phone-alt"></i> Call Now
+                </a>
+                <a href="https://wa.me/+916263540349" target="_blank" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num">5000+</span>
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">50+</span>
+                    <span class="stat-label">Countries Served</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">24/7</span>
+                    <span class="stat-label">Support</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="hero-image-frame">
+                <img src="https://narmadeshwarbanalingamshop.com/wp-content/uploads/2025/01/1-1-575x1024.jpg" alt="Narmadeshwar Shivling">
+                <div class="hero-float-card">
+                    <div class="float-icon">✓</div>
+                    <div class="float-text">
+                        <span>100% Authentic</span>
+                        <small>Direct from Narmada River</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="about-grid">
+        <div class="about-text">
+            <span class="section-label">Our Story</span>
+            <h2>About Us</h2>
+            <div class="gold-line" style="margin: 14px 0 24px;"></div>
+
+            <p style="font-family: 'Noto Sans Devanagari', sans-serif; font-size: 0.98rem; line-height: 1.9; color: var(--text-light); margin-bottom: 20px;">
+                नर्मदेश्वर शिवलिंग जिस पत्थर से बनते है वह माँ नर्मदा के तल से निकाले गये नर्मदा पत्थर होते है। जिनको मशीनों द्वारा तरास कर शिवलिंग के आकार का अंडाकार रूप दिया जाता है।
+            </p>
+
+            <p style="font-size: 1rem; line-height: 1.85; color: var(--text-light); margin-bottom: 28px; font-weight: 300;">
+                We provide customers with their preferred products. Our Shivlings are shipped to countries worldwide. Narmadeshwar Shivling is available in all colors and sizes. Jaldhara and Nandi are also available with Shivling.
+            </p>
+
+            <div class="about-features">
+                <div class="feature-row">
+                    <div class="feature-dot"></div>
+                    <p>सभी कलर और साइज़ में नर्मदेश्वर शिवलिंग उपलब्ध है</p>
+                </div>
+                <div class="feature-row">
+                    <div class="feature-dot"></div>
+                    <p>शिवलिंग के साथ जलधारी और नन्दी भी उपलब्ध है</p>
+                </div>
+                <div class="feature-row">
+                    <div class="feature-dot"></div>
+                    <p>हमारे द्वारा निर्मित शिवलिंग विदेशों तक पहुंचाये जाते है</p>
+                </div>
+            </div>
+
+            <a href="tel:916263540349" class="btn-primary" style="display: inline-flex;">
+                <i class="fas fa-phone-alt"></i> Call Now
+            </a>
+        </div>
+
+        <div class="about-images">
+            <div class="about-img-wrap">
+                <img src="https://narmadeshwarbanalingamshop.com/wp-content/uploads/2025/01/4-e1736590905576-784x1024.jpg" alt="Shivling">
+            </div>
+            <div class="about-img-wrap">
+                <img src="https://narmadeshwarbanalingamshop.com/wp-content/uploads/2025/01/1-1-575x1024.jpg" alt="Shivling">
+            </div>
+            <div class="about-img-wrap">
+                <img src="https://narmadeshwarbanalingamshop.com/wp-content/uploads/2025/01/3-e1736590870313-869x1024.jpg" alt="Shivling">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="product" style="padding: 80px 5%;">
+    <div class="products-wrap">
+        <div class="section-header">
+            <span class="section-label">Divine Collection</span>
+            <h2 class="section-title">Our Sacred Products</h2>
+            <div class="gold-line"></div>
+        </div>
+
+        <!-- Narmada With Jaladhari -->
+        <div class="product-section-banner">
+            <h2>🕉️ Narmada Narmadeshwar Shivling With Jaladhari for Temple</h2>
+        </div>
+
+        <div class="products-grid" style="margin-bottom: 50px;">
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://narmadeshwarbanalingamshop.com/wp-content/uploads/2023/08/13-768x1024.jpg" alt="Original Narmadeshwar Shivling">
+                    <div class="product-overlay"></div>
+                    <div class="product-badge">AUTHENTIC</div>
+                </div>
+                <div class="product-body">
+                    <h3 class="product-name"><a href="https://narmadeshwartrilokshivling.com/product/trilok-shivling/">Original Narmadeshwar Shivling</a></h3>
+                    <div class="product-actions">
+                        <a href="https://api.whatsapp.com/send?phone=916263540349&text=Trilok Shivling Shop https://narmadeshwartrilokshivling.com/product/trilok-shivling/" class="btn-wa-sm" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="tel:916263540349" class="btn-call-sm">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://narmadeshwarbanalingamshop.com/wp-content/uploads/2023/08/3-768x1024.jpg" alt="Om Narmadeshwar Shivling">
+                    <div class="product-overlay"></div>
+                    <div class="product-badge">POPULAR</div>
+                </div>
+                <div class="product-body">
+                    <h3 class="product-name"><a href="https://narmadeshwartrilokshivling.com/product/trilok-shivling/">Om Narmadeshwar Shivling</a></h3>
+                    <div class="product-actions">
+                        <a href="https://api.whatsapp.com/send?phone=916263540349&text=Trilok Shivling Shop https://narmadeshwartrilokshivling.com/product/trilok-shivling/" class="btn-wa-sm" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="tel:916263540349" class="btn-call-sm">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://narmadeshwarbanalingamshop.com/wp-content/uploads/2023/07/6-768x1024.jpg" alt="Akhand Narmadeshwar Shivling">
+                    <div class="product-overlay"></div>
+                    <div class="product-badge">SACRED</div>
+                </div>
+                <div class="product-body">
+                    <h3 class="product-name"><a href="https://narmadeshwartrilokshivling.com/product/trilok-shivling/">Akhand Narmadeshwar Shivling</a></h3>
+                    <div class="product-actions">
+                        <a href="https://api.whatsapp.com/send?phone=916263540349&text=Trilok Shivling Shop https://narmadeshwartrilokshivling.com/product/trilok-shivling/" class="btn-wa-sm" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="tel:916263540349" class="btn-call-sm">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://narmadeshwarbanalingamshop.com/wp-content/uploads/2025/01/2-575x1024.jpg" alt="Ardhnareshwar Shivling">
+                    <div class="product-overlay"></div>
+                    <div class="product-badge">DIVINE</div>
+                </div>
+                <div class="product-body">
+                    <h3 class="product-name"><a href="https://narmadeshwartrilokshivling.com/product/trilok-shivling/">Ardhnareshwar Narmadeshwar Shivling</a></h3>
+                    <div class="product-actions">
+                        <a href="https://api.whatsapp.com/send?phone=916263540349&text=Trilok Shivling Shop https://narmadeshwartrilokshivling.com/product/trilok-shivling/" class="btn-wa-sm" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="tel:916263540349" class="btn-call-sm">
+                            <i class="fas fa-phone"></i> Call
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits-section">
+    <div class="section-header">
+        <span class="section-label" style="color: var(--saffron);">Spiritual Benefits</span>
+        <h2 class="section-title">नर्मदेश्वर शिवलिंग कि घर में स्थापना करने के फ़ायदे</h2>
+        <div class="gold-line"></div>
+    </div>
+
+    <div class="benefits-grid">
+        <div class="benefit-card">
+            <span class="benefit-num">01</span>
+            <p class="benefit-text">यदि आप घर में नर्मदेश्वर शिवलिंग की पूजा करते है तो आपको सभी प्रकार के डर और भय से मुक्ति मिलेगी। इसके अलावा घर में शिवलिंग के पूजन से घर में सुख शांति की प्राप्ति होती है।</p>
+        </div>
+        <div class="benefit-card">
+            <span class="benefit-num">02</span>
+            <p class="benefit-text">हर रोज घर में शिवलिंग की पूजा करने से घर के परिजनो पर आने वाला संकट और रोगो से मुक्ति मिलती है।</p>
+        </div>
+        <div class="benefit-card">
+            <span class="benefit-num">03</span>
+            <p class="benefit-text">यदि आप अपनी नौकरी में प्रमोशन और उन्नति चाहते है तो आपके लिए नर्मदेश्वर शिवलिंग की पूजा बहुत कल्याणकारी शाबित होगी।</p>
+        </div>
+        <div class="benefit-card">
+            <span class="benefit-num">04</span>
+            <p class="benefit-text">नर्मदेश्वर शिवलिंग की पूजा घर में हर रोज करने से आपके घर सुख-समृद्धि का वाश होता है। घर के लड़ाई झगड़ो से छुटकारा मिलेगा।</p>
+        </div>
+        <div class="benefit-card">
+            <span class="benefit-num">05</span>
+            <p class="benefit-text">शिवलिंग की सच्चे मन से पूजा करने वाले भक्तों को अकाल मृत्यु की संभावना भी बहुत कम हो जाती है।</p>
+        </div>
+        <div class="benefit-card">
+            <span class="benefit-num">06</span>
+            <p class="benefit-text">यदि आप घर में सच्चे मन से नर्मदेश्वर शिवलिंग की पूजा करते है तो आपको शारीरिक कष्टों से छुटकारा और मानसिक शांति प्रदान होती है।</p>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES STRIP -->
+<div class="features-strip">
+    <div class="features-inner">
+        <div class="feature-box">
+            <i class="fas fa-shipping-fast"></i>
+            <h3>Worldwide Shipping</h3>
+            <p>We do free and paid delivery in India and other countries according to order.</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-check-square"></i>
+            <h3>Best Quality</h3>
+            <p>Our company manufactures the best quality products and delivers them to customers.</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-clock"></i>
+            <h3>24/7 Support</h3>
+            <p>We are available 24 hours a day, 7 days a week. Call us any time to confirm your order.</p>
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="section-header">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Contact Us For Free</h2>
+        <div class="gold-line"></div>
+    </div>
+
+    <div class="contact-grid">
+        <div class="contact-info">
+            <h2>Reach Us Directly</h2>
+            <p>We're always ready to assist you with your order. Call, WhatsApp, or send us a message.</p>
+
+            <div class="contact-items">
+                <a href="tel:916263540349" class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-headphones-alt"></i></div>
+                    <div class="contact-detail">
+                        <strong>Call Now For Free</strong>
+                        <span>+91 6263540349</span>
+                    </div>
+                </a>
+                <a href="mailto:mayurbirla907@gmail.com" class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope-open"></i></div>
+                    <div class="contact-detail">
+                        <strong>Email Us</strong>
+                        <span>mayurbirla907@gmail.com</span>
+                    </div>
+                </a>
+                <a href="tel:916263540349" class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-detail">
+                        <strong>Our Location</strong>
+                        <span>Bakawan, M.P (451113)</span>
+                    </div>
+                </a>
+                <a href="https://wa.me/+916263540349" target="_blank" class="contact-item">
+                    <div class="contact-icon" style="background: var(--whatsapp);"><i class="fab fa-whatsapp"></i></div>
+                    <div class="contact-detail">
+                        <strong>WhatsApp</strong>
+                        <span>+91 6263540349</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form name="New Form" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="form-field-name">YOUR NAME</label>
+                    <input type="text" id="form-field-name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="form-field-field_f730942">PHONE NUMBER</label>
+                    <input type="text" id="form-field-field_f730942" placeholder="Enter your number">
+                </div>
+                <div class="form-group">
+                    <label for="form-field-message">MESSAGE</label>
+                    <textarea id="form-field-message" placeholder="Your message..."></textarea>
+                </div>
+                <button type="submit" class="form-submit">SEND MESSAGE →</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-left">
+        <a href="https://narmadeshwarbanalingamshop.com/privacy-policy">Privacy Policy</a>
+    </div>
+    <div class="footer-right">Copyright © 2024 Narmadeshwar TrilokShivling Shop. All rights reserved.</div>
+</footer>
+
+<!-- FLOATING CHAT BUTTONS -->
+<div class="floating-chat">
+    <a href="tel:916263540349" class="chat-btn chat-call" title="Call Us">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+    <a href="https://wa.me/+916263540349" target="_blank" class="chat-btn chat-wa" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+<script>
+    // Scroll progress bar
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = (scrollTop / docHeight) * 100;
+        document.getElementById('scrollBar').style.width = progress + '%';
+    });
+
+    // Mobile nav toggle
+    function toggleNav() {
+        const nav = document.getElementById('mainNav');
+        nav.classList.toggle('nav-open');
+    }
+
+    // Close nav on link click
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('mainNav').classList.remove('nav-open');
+        });
+    });
+
+    // Form submit → WhatsApp
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        const myWhatsAppNumber = '916263540349';
+        const name = document.getElementById('form-field-name').value;
+        const number = document.getElementById('form-field-field_f730942').value;
+        const message = document.getElementById('form-field-message').value;
+
+        let whatsappMessage = `Hello, I have a query.\n\n`;
+        whatsappMessage += `*Name:* ${name}\n`;
+        whatsappMessage += `*Number:* ${number}\n`;
+        whatsappMessage += `*Message:* ${message}`;
+
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=${myWhatsAppNumber}&text=${encodeURIComponent(whatsappMessage)}`;
+        window.open(whatsappUrl, '_blank');
+    }
+
+    // Intersection observer for fade-up on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.product-card, .benefit-card, .feature-box, .contact-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(el);
+    });
+</script>
+
+</body>
+</html>
